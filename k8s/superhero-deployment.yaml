@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: superhero-app
-          image: harbor.local/superhero/superhero-app:5cfe633
+          image: harbor.local/superhero/superhero-app:12c861
           ports:
             - containerPort: 5173
