@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: superhero-app
+  namespace: superhero
+  labels:
+    app: superhero-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: superhero-app
+  template:
+    metadata:
+      labels:
+        app: superhero-app
+    spec:
+      containers:
+        - name: superhero-app
+          image: harbor.local/superhero/superhero-app:5cfe633
+          ports:
+            - containerPort: 5173
